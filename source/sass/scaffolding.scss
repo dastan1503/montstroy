@@ -23,9 +23,25 @@
 }
 
 @font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Robotoblack.woff") format("woff"), url("../fonts/Robotoblack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Circe";
   src: url("../fonts/Circe.woff") format("woff"), url("../fonts/Circe.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Ralewayblack.woff") format("woff"), url("../fonts/Ralewayblack.woff2") format("woff2");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -42,6 +58,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+main {
+  width: 100%;
 }
 
 img {

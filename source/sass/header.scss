@@ -1,6 +1,6 @@
 .header {
-  width: calc(100% - 60px;
-  max-width: 1920px;
+  width: calc(100% - 60px);
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px 30px;
   display: flex;
@@ -64,7 +64,7 @@
 }
 
 .header__scroll:hover {
-  box-shadow: 0px 2px 4.75px 0.25px rgba(0, 255, 215, 0.6);
+  box-shadow: $hover-shadow;
   transition: all 0.2s linear;
 }
 
@@ -181,6 +181,7 @@
   }
 
   .header nav {
+    top: 49px;
     width: 100%;
   }
 
