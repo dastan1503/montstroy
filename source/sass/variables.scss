@@ -1,10 +1,11 @@
-$font-mono: "PT Mono", "Courier New", monospace;
+$font-circe: "Circe", "Arial", sans-serif;
+$font-rale: "Raleway", "Arial", sans-serif;
 
-$footer-border: 1px solid rgba(98, 105, 98, 0.2);
-$advantage-border: 1px solid #ebebeb;
+$bg-green: #00ffd7;
+$gray-text: #707070;
+$bg-gray: #e7e7e7;
+$light-gray: #f4f4f4;
 
-$bg-blue: #00b2ff;
-$bg-input: rgba(255, 255, 255, 0.1);
-$bg-dark: #1b2d37;
-$bg-header: #203c42;
-$bg-footer: #fafafa;
+$border-gray: 1px solid #dedede;
+
+$hover-shadow: 0 2px 4.75px 5px rgba(0, 255, 215, 0.6);

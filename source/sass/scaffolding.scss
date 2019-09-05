@@ -1,7 +1,55 @@
 @font-face {
-  font-family: "PT Mono";
-  src: url("../fonts/ptmono.woff") format("woff"), url("../fonts/ptmono.woff2") format("woff2");
-  font-weight: normal;
+  font-family: "Roboto";
+  src: url("../fonts/Robotomedium.woff") format("woff"), url("../fonts/Robotomedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto.woff") format("woff"), url("../fonts/Roboto.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Robotobold.woff") format("woff"), url("../fonts/Robotobold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Robotoblack.woff") format("woff"), url("../fonts/Robotoblack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/Circe.woff") format("woff"), url("../fonts/Circe.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/ralewayblack.woff") format("woff"), url("../fonts/ralewayblack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/ralewaybold.woff") format("woff"), url("../fonts/ralewaybold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -11,13 +59,17 @@ body {
   padding: 0;
   font-size: 16px;
   line-height: 22px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: #666666;
-  font-weight: normal;
+  font-weight: 400;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+main {
+  width: 100%;
 }
 
 img {
@@ -32,8 +84,4 @@ img {
 a {
   color: #666666;
   text-decoration: none;
-}
-
-main {
-  width: 100%;
 }

@@ -1,0 +1,18 @@
+.map h2,
+.map__contacts {
+  display: none;
+}
+
+.map {
+  width: 100%;
+  height: 807px;
+  margin: 0 auto;
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
