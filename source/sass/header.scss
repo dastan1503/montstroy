@@ -117,7 +117,7 @@
     display: block;
   }
 
-  .header input:checked ~ nav{
+  .header input:checked ~ nav {
     overflow: hidden;
     opacity: 1;
     transition-property: opacity;
@@ -125,7 +125,7 @@
     transition-timing-function: linear;
   }
 
-  .header input:not(:checked) ~ nav{
+  .header input:not(:checked) ~ nav {
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.5s;
@@ -184,5 +184,4 @@
     top: 49px;
     width: 100%;
   }
-
 }

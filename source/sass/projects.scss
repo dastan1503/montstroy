@@ -1,0 +1,44 @@
+.projects {
+  width: calc(100% - 60px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+
+.projects h2 {
+  width: 100%;
+  font-size: 30px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+  text-transform: uppercase;
+  font-family: $font-rale;
+  font-weight: 900;
+}
+
+.projects h2::after {
+  content: "";
+  display: inline-block;
+  width: calc(100% - 330px);
+  height: 1px;
+  background-color: #000000;
+}
+
+.projects ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects li{
+  width: calc((100% - 15px) / 4);
+  &.projects__buratino,
+  &.projects__energo {
+    width: calc((100% - 5px) / 2);
+  }
+}
