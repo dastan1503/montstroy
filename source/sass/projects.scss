@@ -22,7 +22,7 @@
   content: "";
   display: inline-block;
   width: calc(100% - 330px);
-  height: 1px;
+  height: 2px;
   background-color: #000000;
 }
 
@@ -30,15 +30,216 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.projects li{
-  width: calc((100% - 15px) / 4);
+.projects li {
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  width: calc((100% - 15px) / 4 - 50px);
+  padding: 55px 20px 35px 30px;
+  margin-bottom: 5px;
+
   &.projects__buratino,
   &.projects__energo {
-    width: calc((100% - 5px) / 2);
+    width: calc((100% - 5px) / 2 - 130px);
+    padding: 50px 100px 65px 30px;
+  }
+}
+
+.projects li a {
+  width: 42px;
+  height: 30px;
+  position: absolute;
+  opacity: 0.34;
+  border: 2px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 11px;
+  right: 20px;
+
+  &:hover {
+    background-color: $bg-green;
+    opacity: 1;
+    border-color: $bg-green;
+
+    & svg path {
+      fill: #575757;
+    }
+  }
+}
+
+.projects p {
+  font-size: 15px;
+  color: #ffffff;
+  opacity: 66%;
+}
+
+.projects h3 {
+  margin: 0;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.projects__buratino h3,
+.projects__energo h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.projects__futur {
+  background-image: url("../img/futur-desktop.jpg");
+}
+
+.projects__oreol {
+  background-image: url("../img/oreol-desktop.jpg");
+}
+
+.projects__family {
+  background-image: url("../img/family-desktop.jpg");
+}
+
+.projects__medial {
+  background-image: url("../img/medial-desktop.jpg");
+}
+
+.projects__energo {
+  background-image: url("../img/energo-desktop.jpg");
+}
+
+.projects__buratino {
+  background-image: url("../img/buratino-desktop.jpg");
+}
+
+
+@media (max-width: 1199px) {
+  .projects {
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    margin: 0;
+  }
+
+  .projects ul {
+    flex-direction: column;
+  }
+
+  .projects h2 {
+    font-size: 26px;
+  }
+
+  .projects__buratino h3,
+  .projects__energo h3 {
+    font-size: 24px;
+  }
+
+  .projects h2::after {
+    display: none;
+  }
+
+  .projects li {
+    width: calc(100% - 120px);
+    padding: 30px 80px 30px 40px;
+
+    &.projects__buratino,
+    &.projects__energo {
+      padding: 30px 80px 30px 40px;
+      width: calc(100% - 120px);
+    }
+  }
+
+  .projects p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .projects li a {
+    display: none;
+  }
+
+  .projects__futur {
+    background-image: url("../img/futur-tablet.jpg");
+  }
+
+  .projects__oreol {
+    background-image: url("../img/oreol-tablet.jpg");
+  }
+
+  .projects__family {
+    background-image: url("../img/family-tablet.jpg");
+  }
+
+  .projects__medial {
+    background-image: url("../img/medial-tablet.jpg");
+  }
+
+  .projects__energo {
+    background-image: url("../img/energo-tablet.jpg");
+  }
+
+  .projects__buratino {
+    background-image: url("../img/buratino-tablet.jpg");
+  }
+}
+
+@media (max-width: 767px) {
+  .projects p {
+    display: none;
+  }
+
+  .projects h2 {
+    font-size: 20px;
+  }
+
+  .projects h3 {
+    text-align: center;
+    font-size: 16px;
+    font-family: $font-rale;
+    font-weight: 700;
+  }
+
+  .projects li {
+    &.projects__buratino,
+    &.projects__energo {
+      padding: 0;
+      width: 100%;
+    }
+    padding: 0;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .projects__futur {
+    background-image: url("../img/futur-mobile.jpg");
+  }
+
+  .projects__oreol {
+    background-image: url("../img/oreol-mobile.jpg");
+  }
+
+  .projects__family {
+    background-image: url("../img/family-mobile.jpg");
+  }
+
+  .projects__medial {
+    background-image: url("../img/medial-mobile.jpg");
+  }
+
+  .projects__energo {
+    background-image: url("../img/energo-mobile.jpg");
+  }
+
+  .projects__buratino {
+    background-image: url("../img/buratino-mobile.jpg");
   }
 }
