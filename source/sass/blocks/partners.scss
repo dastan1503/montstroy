@@ -2,7 +2,7 @@
   width: calc(100% - 60px);
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: 20px 30px 125px;
 }
 
 .partners div {
@@ -45,6 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s linear;
 
   &:first-of-type {
     margin-left: 37px;
@@ -73,6 +74,7 @@
 
   &:hover {
     background-color: $bg-green;
+    transition: background-color 0.2s linear;
   }
 }
 
@@ -80,21 +82,28 @@
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  width: 100%;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
 
   & li {
-    border: 1px solid $bg-gray;
-    width: calc(100% - 90px) / 4;
+    width: calc((100% - 90px) / 4);
     min-height: 135px;
 
     & a {
+      opacity: 0.5;
+      border: 1px solid $bg-gray;
       width: 100%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: opacity 0.2s linear;
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 0.2s linear;
+      }
     }
   }
 }
@@ -105,10 +114,16 @@
     width: calc(100% - 40px);
     padding: 0 20px;
     margin: 0;
+    overflow: hidden;
   }
 
   .partners h2 {
     font-size: 26px;
+    justify-content: flex-start;
+  }
+
+  .partners h2 span {
+    display: inline;
   }
 
   .partners h2::after {
@@ -150,7 +165,7 @@
   }
 
   .partners h2 span {
-    display: inline;
+    display: none;
   }
 
   .partners ul {

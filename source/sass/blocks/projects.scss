@@ -160,10 +160,6 @@
     line-height: 22px;
   }
 
-  .projects li a {
-    display: none;
-  }
-
   .projects__futur {
     background-image: url("../img/futur-tablet.jpg");
   }
@@ -217,6 +213,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .projects li a {
+    left: calc(50% - 23px);
+    height: 20px;
   }
 
   .projects__futur {

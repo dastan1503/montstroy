@@ -2,8 +2,8 @@
   width: 100%;
   background-color: #000000;
   background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0.3) 100%), url("../img/bg-desktop.jpg");
-  background-position: top center, top center;
-  background-size: 100% 100%, 100% 100%;
+  background-position: top right, top right;
+  background-size: 100% 100%, 1920px 1035px;
   background-repeat: no-repeat, no-repeat;
   display: flex;
   flex-direction: column;
@@ -55,22 +55,26 @@
   font-size: 20px;
   background-color: $bg-green;
   width: 300px;
-  height: 56px;
+  min-height: 56px;
   text-transform: uppercase;
   border: none;
   margin-right: 20px;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 .main-screen__contacts {
   outline: 1px solid $bg-green;
   width: 300px;
-  height: 56px;
+  min-height: 56px;
   color: #ffffff;
   font-weight: 900;
   font-size: 20px;
   text-transform: uppercase;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 .main-screen__services:hover,
@@ -117,20 +121,17 @@
 @media (max-width: 1199px) {
   .main-screen {
     background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0.3) 100%), url("../img/bg-tablet.jpg");
-    background-position: top center, top center;
-    background-size: 100% 600px, 100% 600px;
+    background-size: 768px 600px, 768px 600px;
     background-repeat: no-repeat, no-repeat;
     display: flex;
     flex-direction: column;
-    padding: 130px 85px 0;
-    width: calc(100% - 171px);
-    background-color: #ffffff;
+    width: 100%;
   }
 
-
   .main-screen__wrapper {
+    padding: 130px 85px 0;
+    width: calc(100% - 171px);
     background-color: transparent;
-    padding: 0;
     min-height: 470px;
   }
 
@@ -228,14 +229,14 @@
 
 @media (max-width: 767px) {
   .main-screen {
-    padding: 130px 20px 30px;
-    width: calc(100% - 40px);
+    width: 100%;
     background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0.3) 100%), url("../img/bg-mobile.jpg");
-    background-size: 100% 470px, 100% 470px;
+    background-size: 320px 470px, 320px 470px;
   }
 
   .main-screen__wrapper {
-    width: 100%;
+    padding: 130px 20px 30px;
+    width: calc(100% - 40px);
     margin: 0;
   }
 
@@ -278,15 +279,14 @@
 
   .main-screen__contacts {
     outline: none;
-    border-top: 1px solid $bg-green;
-    border-bottom: 1px solid $bg-green;
+    border: 1px solid $bg-green;
   }
 
   .main-screen__wrapper button {
     width: 100%;
     margin: 0;
     margin-bottom: 10px;
-    height: 60px;
+    min-height: 60px;
   }
 
   .main-screen__slider {
@@ -300,9 +300,8 @@
 
   .main-screen__slider input:checked + label {
     box-shadow: none;
-    width: calc(100% - 2px);
-    border-top: $border-gray;
-    border-bottom: $border-gray;
+    width: calc(100% - 42px);
+    border: $border-gray;
     transform: none;
     padding: 25px 50px 20px;
   }
