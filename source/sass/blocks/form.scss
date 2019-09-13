@@ -1,10 +1,10 @@
 .form {
   position: absolute;
   left: calc(50% - 285px);
-  bottom: 100px;
-  width: 410px;
-  min-height: 485px;
-  padding: 55px 105px 40px 75px;
+  bottom: 140px;
+  width: 400px;
+  min-height: 490px;
+  padding: 55px 105px 35px 75px;
   z-index: 10;
   background-color: #ffffff;
 }
@@ -16,6 +16,8 @@
   font-family: $font-rale;
   color: #000000;
   text-align: center;
+  margin-top: 0;
+  letter-spacing: 1px;
 }
 
 .form form {
@@ -101,7 +103,7 @@
   min-height: 60px;
   background-color: #000000;
   color: #ffffff;
-  margin-top: 20px;
+  margin-top: 30px;
   transition: box-shadow 0.2s linear;
   cursor: pointer;
 
@@ -116,7 +118,7 @@
     width: 42%;
     min-height: 320px;
     left: 65px;
-    bottom: 150px;
+    bottom: 170px;
     padding: 35px 45px 30px 45px;
   }
 
@@ -137,7 +139,22 @@
     }
   }
 
+  .form p {
+    padding: 0;
+    font-size: 10px;
+    line-height: 11px;
+  }
+
+  .form a {
+    font-size: 10px;
+    line-height: 11px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .form button {
+    margin-top: 20px;
     font-size: 16px;
     width: 165px;
     min-height: 45px;

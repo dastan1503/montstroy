@@ -1,8 +1,8 @@
 .header {
-  width: calc(100% - 60px);
-  max-width: 1200px;
+  width: calc(100% - 30px);
+  max-width: 1170px;
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: 20px 15px;
   display: flex;
   align-items: center;
 }
@@ -10,6 +10,8 @@
 .header__logo {
   margin-right: 60px;
   transition: all 0.2s linear;
+  width: 141px;
+  height: 60px;
 }
 
 .header__logo:hover {
@@ -21,7 +23,7 @@
   flex-grow: 1;
 }
 
-.header__nav ul {
+.header__nav-list {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +31,7 @@
   padding: 0;
 }
 
-.header__nav li {
+.header__nav-item {
   font-weight: 500;
   margin-right: 25px;
   color: $gray-text;
@@ -37,13 +39,13 @@
   text-transform: uppercase;
 }
 
-.header__nav li a {
+.header__nav-item a {
   transition: all 0.2s linear;
-}
 
-.header__nav li a:hover {
-  color: #000000;
-  transition: all 0.2s linear;
+  &:hover {
+    color: #000000;
+    transition: all 0.2s linear;
+  }
 }
 
 .header__tel {
@@ -52,11 +54,11 @@
   font-weight: 700;
   font-size: 18px;
   transition: all 0.2s linear;
-}
 
-.header__tel:hover {
-  color: $gray-text;
-  transition: all 0.2s linear;
+  &:hover {
+    color: $gray-text;
+    transition: all 0.2s linear;
+  }
 }
 
 .header__scroll {
@@ -69,11 +71,11 @@
   font-size: 16px;
   color: #000000;
   transition: all 0.2s linear;
-}
 
-.header__scroll:hover {
-  box-shadow: $hover-shadow;
-  transition: all 0.2s linear;
+  &:hover {
+    box-shadow: $hover-shadow;
+    transition: all 0.2s linear;
+  }
 }
 
 .header__burger {
@@ -97,15 +99,21 @@
   }
 
   .header__tel {
+    padding-top: 7px;
     margin-left: auto;
     margin-right: 0;
     font-size: 14px;
   }
 
-  .header nav {
+  .header__nav {
+    display: none;
+  }
+
+  .header__nav--active {
+    display: block;
     position: absolute;
     z-index: 100;
-    top: 52px;
+    top: 51px;
     left: 0;
     width: 207px;
     flex-grow: 0;
@@ -117,13 +125,13 @@
     border: none;
   }
 
-  .header ul {
+  .header__nav-list {
     flex-direction: column;
     align-items: center;
     background-color: $bg-gray;
   }
 
-  .header ul li {
+  .header__nav-item {
     justify-content: center;
     width: 100%;
     display: flex;
@@ -132,7 +140,7 @@
     border-bottom: $border-gray;
   }
 
-  .header li a {
+  .header__nav-item a {
     width: 100%;
     display: flex;
     align-items: center;
@@ -145,6 +153,7 @@
   .header__burger svg {
     width: 26px;
     height: 21px;
+    opacity: 0.4;
   }
 }
 
@@ -164,7 +173,7 @@
     height: 14px;
   }
 
-  .header nav {
+  .header__nav--active {
     top: 49px;
     width: 100%;
   }

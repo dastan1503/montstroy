@@ -1,8 +1,8 @@
 .projects {
-  width: calc(100% - 60px);
-  max-width: 1200px;
+  width: calc(100% - 30px);
+  max-width: 1170px;
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: 20px 15px;
 }
 
 .projects h2 {
@@ -16,17 +16,18 @@
   text-transform: uppercase;
   font-family: $font-rale;
   font-weight: 900;
+  margin-bottom: 35px;
 }
 
 .projects h2::after {
   content: "";
   display: inline-block;
-  width: calc(100% - 330px);
+  width: calc(100% - 300px);
   height: 2px;
   background-color: #000000;
 }
 
-.projects ul {
+.projects__list {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -36,23 +37,31 @@
   margin: 0;
 }
 
-.projects li {
+.projects__item {
   background-color: #000000;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;
-  width: calc((100% - 15px) / 4 - 50px);
-  padding: 55px 20px 35px 30px;
+  width: calc((100% - 15px) / 4 - 40px);
+  padding: 55px 10px 20px 30px;
   margin-bottom: 5px;
 
-  &.projects__buratino,
-  &.projects__energo {
-    width: calc((100% - 5px) / 2 - 130px);
-    padding: 50px 100px 65px 30px;
+  &--long {
+    width: calc((100% - 5px) / 2 - 110px);
+    padding: 50px 80px 45px 30px;
+  }
+
+  & img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
 }
 
-.projects li a {
+.projects__item a {
   width: 42px;
   height: 30px;
   position: absolute;
@@ -62,63 +71,50 @@
   justify-content: center;
   align-items: center;
   bottom: 11px;
-  right: 20px;
+  right: 10px;
+  z-index: 2;
+
+  & svg {
+    width: 16px;
+    height: 6px;
+    fill: #ffffff;
+  }
 
   &:hover {
     background-color: $bg-green;
     opacity: 1;
     border-color: $bg-green;
 
-    & svg path {
+    & svg {
       fill: #575757;
     }
   }
 }
 
 .projects p {
+  position: relative;
   font-size: 15px;
+  line-height: 23px;
   color: #ffffff;
   opacity: 66%;
+  z-index: 10;
 }
 
 .projects h3 {
+  position: relative;
+  z-index: 2;
   margin: 0;
   font-weight: 900;
   font-size: 24px;
   line-height: 24px;
+  min-height: 50px;
   color: #ffffff;
 }
 
-.projects__buratino h3,
-.projects__energo h3 {
+.projects__item--long h3 {
   font-size: 32px;
   font-weight: 700;
 }
-
-.projects__futur {
-  background-image: url("../img/futur-desktop.jpg");
-}
-
-.projects__oreol {
-  background-image: url("../img/oreol-desktop.jpg");
-}
-
-.projects__family {
-  background-image: url("../img/family-desktop.jpg");
-}
-
-.projects__medial {
-  background-image: url("../img/medial-desktop.jpg");
-}
-
-.projects__energo {
-  background-image: url("../img/energo-desktop.jpg");
-}
-
-.projects__buratino {
-  background-image: url("../img/buratino-desktop.jpg");
-}
-
 
 @media (max-width: 1199px) {
   .projects {
@@ -127,61 +123,50 @@
     margin: 0;
   }
 
-  .projects ul {
+  .projects__list {
     flex-direction: column;
   }
 
   .projects h2 {
     font-size: 26px;
-  }
-
-  .projects__buratino h3,
-  .projects__energo h3 {
-    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 30px;
   }
 
   .projects h2::after {
     display: none;
   }
 
-  .projects li {
-    width: calc(100% - 120px);
-    padding: 30px 80px 30px 40px;
+  .projects h3 {
+    min-height: auto;
+    font-weight: 700;
+  }
 
-    &.projects__buratino,
-    &.projects__energo {
-      padding: 30px 80px 30px 40px;
+  .projects__item {
+    width: calc(100% - 120px);
+    padding: 45px 80px 45px 40px;
+    height: 90px;
+    margin-bottom: 10px;
+
+    &--long {
+      padding: 45px 80px 45px 40px;
       width: calc(100% - 120px);
+      font-size: 24px;
+
+      & h3 {
+        font-size: 24px;
+      }
     }
   }
 
   .projects p {
     font-size: 18px;
     line-height: 22px;
-  }
+    opacity: 0.66;
 
-  .projects__futur {
-    background-image: url("../img/futur-tablet.jpg");
-  }
-
-  .projects__oreol {
-    background-image: url("../img/oreol-tablet.jpg");
-  }
-
-  .projects__family {
-    background-image: url("../img/family-tablet.jpg");
-  }
-
-  .projects__medial {
-    background-image: url("../img/medial-tablet.jpg");
-  }
-
-  .projects__energo {
-    background-image: url("../img/energo-tablet.jpg");
-  }
-
-  .projects__buratino {
-    background-image: url("../img/buratino-tablet.jpg");
+    & span {
+      display: none;
+    }
   }
 }
 
@@ -201,9 +186,8 @@
     font-weight: 700;
   }
 
-  .projects li {
-    &.projects__buratino,
-    &.projects__energo {
+  .projects__item {
+    &--long {
       padding: 0;
       width: 100%;
     }
@@ -215,32 +199,8 @@
     justify-content: center;
   }
 
-  .projects li a {
+  .projects__item a {
     left: calc(50% - 23px);
     height: 20px;
-  }
-
-  .projects__futur {
-    background-image: url("../img/futur-mobile.jpg");
-  }
-
-  .projects__oreol {
-    background-image: url("../img/oreol-mobile.jpg");
-  }
-
-  .projects__family {
-    background-image: url("../img/family-mobile.jpg");
-  }
-
-  .projects__medial {
-    background-image: url("../img/medial-mobile.jpg");
-  }
-
-  .projects__energo {
-    background-image: url("../img/energo-mobile.jpg");
-  }
-
-  .projects__buratino {
-    background-image: url("../img/buratino-mobile.jpg");
   }
 }

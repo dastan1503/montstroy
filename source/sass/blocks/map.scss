@@ -22,9 +22,9 @@
 
 .map__contacts {
   position: absolute;
-  top: calc(100% + 50px);
+  top: calc(100% + 60px);
   width: 220px;
-  left: calc(50% + 370px);
+  left: calc(50% + 420px);
   z-index: 10;
   color: #ffffff;
 }
@@ -36,7 +36,7 @@
 }
 
 .map__contacts li {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 
   & p,
   & a {
@@ -46,7 +46,10 @@
     & svg {
       position: absolute;
       top: 3px;
-      left: -25px;
+      left: -30px;
+      width: 16px;
+      height: 16px;
+      fill: $bg-green;
     }
   }
 }
@@ -57,12 +60,14 @@
 }
 
 .map__time {
+  font-size: 13px;
   display: block;
+  line-height: 15px;
+  opacity: 0.6;
 }
 
 .map__contacts a {
   color: #ffffff;
-  line-height: 38px;
 }
 
 @media (max-width: 1199px) {
@@ -71,7 +76,7 @@
   }
 
   .map__contacts {
-    top: calc(100% + 20px);
+    top: calc(100% + 30px);
     width: 170px;
     left: calc(50% + 160px);
   }
