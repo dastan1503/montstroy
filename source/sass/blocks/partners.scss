@@ -166,6 +166,11 @@
 }
 
 @media (max-width: 767px) {
+  .partners {
+    margin-top: 5px;
+    height: 240px;
+  }
+
   .partners h2 {
     justify-content: flex-start;
     font-size: 20px;

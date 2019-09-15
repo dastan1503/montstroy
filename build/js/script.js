@@ -41,10 +41,11 @@
 
   // аккордеоны в сервисах
   (function () {
-    var clickableItems = document.querySelectorAll('.services__main-item');
+    var clickableItems = document.querySelectorAll('.services__main-item h3');
     var container = document.querySelector('.services__main-list');
+    var blocks = document.querySelectorAll('.services__main-item');
 
-    clickableItems.forEach(function (element) {
+    clickableItems.forEach(function (element, index) {
       element.addEventListener('click', function (evt) {
         container.style = '';
         evt.preventDefault();
@@ -52,13 +53,16 @@
         var media = window.matchMedia('(max-width: 767px)').matches;
 
         if (media) {
-          element.classList.toggle('services__main-item--active');
+          container.style = 'height: auto;';
+          blocks[index].classList.toggle('services__main-item--active');
         } else {
           activeElement.classList.remove('services__main-item--active');
-          element.classList.add('services__main-item--active');
+          blocks[index].classList.add('services__main-item--active');
+          container.style = 'height: ' + blocks[index].clientHeight + 'px;';
         }
 
-      container.style = 'height: ' + element.clientHeight + 'px;';
+
+
       });
     });
   })();

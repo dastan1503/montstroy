@@ -109,8 +109,12 @@
 }
 
 @media (max-width: 767px) {
+  .map {
+    margin-top: 15px;
+  }
+
   .map iframe {
-    height: 211px;
+    height: 196px;
   }
 
   .map h2 {
@@ -127,10 +131,15 @@
     position: static;
     background-color: #000000;
     width: calc(100% - 130px);
-    padding: 20px 65px;
+    padding: 20px 65px 15px 100px;
 
     & li {
       margin-bottom: 10px;
+
+      & p,
+      & a {
+        line-height: 20px;
+      }
     }
   }
 

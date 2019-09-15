@@ -385,7 +385,7 @@
         <ul>
           <li>
             <p class="footer__adress">
-              <svg><use xlink:href="img/sprite_auto.svg#map-pin"></use></svg>
+              <svg><use xlink:href="img/sprite_auto.svg#geo-pin"></use></svg>
             Варшавское шоссе, д.&nbsp;118,&nbsp;к.1&nbsp;Бизнес-центр "ВАРШАВКА Sky"</p>
           </li>
           <li>
@@ -437,19 +437,14 @@
   <script src="js/script.js"></script>
   <script>
     var mySwiper = new Swiper ('.swiper-container', {
-      // Optional parameters
       direction: 'horizontal',
       loop: true,
-
-      // If we need pagination
       pagination: {
         el: '.swiper-pagination',
       },
-
       centeredSlides: true,
       slideToClickedSlide: true,
-
-     breakpoints: {
+      breakpoints: {
         767: {
           slidesPerView: 1
         },
@@ -457,7 +452,6 @@
           slidesPerView: 2
         }
       }
-
     })
   </script>
 </body>

@@ -182,33 +182,38 @@
   .services h2 {
     padding: 0 20px;
     font-size: 20px;
+    margin-bottom: 0;
   }
 
-  .services input:checked + li h3 {
+  .services__main-item--active h3 {
     box-shadow: 0 2px 6.3px 0.7px rgba(0, 255, 216, 0.65) inset;
     z-index: 10;
     position: relative;
     font-size: 16px;
   }
 
-  .services input:checked + li label::after {
-    opacity: 1;
-  }
-
-  .services__main-list input + li {
+  .services__main-item {
     width: 100%;
   }
 
-  .services__main-list input:checked + li {
+  .services__main-item--active {
     width: 100%;
     order: 0;
   }
 
-  .services__main-list input:checked + li a {
+  .services__nested-list li {
     background-color: #ffffff;
+    min-height: 39px;
+    font-size: 12px;
+  }
+
+  .services__nested-list li a {
+    font-size: 12px;
+    line-height: 15px;
   }
 
   .services__main-list {
+    margin-top: 10px;
     height: auto;
   }
 
