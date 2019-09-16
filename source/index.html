@@ -438,19 +438,12 @@
   <script>
     var mySwiper = new Swiper ('.swiper-container', {
       direction: 'horizontal',
+      centeredSlides: true,
       loop: true,
+      slidesPerView: 'auto',
+
       pagination: {
         el: '.swiper-pagination',
-      },
-      centeredSlides: true,
-      slideToClickedSlide: true,
-      breakpoints: {
-        767: {
-          slidesPerView: 1
-        },
-        1199: {
-          slidesPerView: 2
-        }
       }
     })
   </script>

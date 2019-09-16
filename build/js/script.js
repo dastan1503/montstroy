@@ -60,11 +60,7 @@
           blocks[index].classList.add('services__main-item--active');
           container.style = 'height: ' + blocks[index].clientHeight + 'px;';
         }
-
-
-
       });
     });
   })();
-
 })();

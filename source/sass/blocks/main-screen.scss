@@ -86,20 +86,11 @@
 }
 
 .main-screen__slider {
-  display: flex;
   max-width: 1170px;
   width: calc(100% - 30px);
   padding: 0 15px;
   height: 210px;
-  justify-content: space-between;
   margin: 0 auto;
-}
-
-.main-screen__slider p {
-  margin-top: 25px;
-  text-align: center;
-  color: #ffffff;
-  opacity: 0.6;
 }
 
 .main-screen__slider .swiper-slide {
@@ -107,8 +98,10 @@
   flex-direction: column;
   width: 235px;
   align-items: center;
-  font-size: 15px;
-  line-height: 20px;
+}
+
+.swiper-slide-active {
+  background-color: green;
 }
 
 .swiper-pagination {
@@ -121,6 +114,17 @@
   width: 74px;
   height: 69px;
 }
+
+.main-screen__slider p {
+  font-size: 15px;
+  line-height: 20px;
+  width: 235px;
+  margin-top: 25px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
 
 @media (max-width: 1199px) {
   .main-screen {
@@ -167,18 +171,31 @@
 
   .main-screen__slider {
     width: calc(100% - 50px);
-    padding: 60px 25px 120px;
-    background-color: #ffffff;
+    padding: 0 25px;
     height: 275px;
+    margin: 0;
+    background-color: #ffffff;
   }
 
-  .main-screen__slider svg {
-    fill: #000000;
+  .main-screen__slider .swiper-container {
+    width: 100%;
+    margin: 0;
   }
 
-  .swiper-pagination {
-    display: block;
-    height: auto;
+  .main-screen__slider .swiper-slide {
+    width: calc(100% / 3 - 80px);
+    padding: 25px 40px 35px;
+    opacity: 0.5;
+    z-index: 0;
+    height: 103px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 18px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .main-screen__slider .swiper-slide-active {
+    transform: scale(1.3);
+    z-index: 10;
+    opacity: 1;
   }
 
   .main-screen__slider p {
@@ -186,20 +203,13 @@
     font-size: 12px;
   }
 
-  .main-screen__slider .swiper-slide {
-    width: calc(30% - 80px);
-    box-shadow: 0 10px 18px 2px rgba(0, 0, 0, 0.05);
-    background-color: #ffffff;
-    padding: 25px 40px 35px;
-    opacity: 0.5;
-    z-index: 0;
+  .swiper-pagination {
+    display: block;
+    height: auto;
   }
 
-  .main-screen__slider input:checked + label {
-    transform: scale(1.3);
-    transition: all 0.2s linear;
-    z-index: 10;
-    opacity: 1;
+  .main-screen__slider svg {
+    fill: #000000;
   }
 }
 
