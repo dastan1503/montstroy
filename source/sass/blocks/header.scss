@@ -20,6 +20,7 @@
 }
 
 .header__nav {
+  display: flex;
   flex-grow: 1;
 }
 
@@ -51,6 +52,7 @@
 .header__tel {
   margin-right: 25px;
   color: #000000;
+  min-width: 190px;
   font-weight: 700;
   font-size: 18px;
   transition: all 0.2s linear;
@@ -63,12 +65,13 @@
 
 .header__scroll {
   background-color: $bg-green;
-  width: 190px;
+  min-width: 190px;
   min-height: 45px;
   display: flex;
-  align-items: center;
+  line-height: 45px;
   justify-content: center;
   font-size: 16px;
+  font-weight: 700;
   color: #000000;
   transition: all 0.2s linear;
 

@@ -41,6 +41,15 @@
   }
 }
 
+.footer__logo {
+  transition: all 0.2s linear;
+
+  &:hover {
+    opacity: 0.5;
+    transition: all 0.2s linear;
+  }
+}
+
 .footer__contacts {
   display: none;
 }

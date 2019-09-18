@@ -33,11 +33,63 @@
   (function () {
     var burgerButton = document.querySelector('.header__burger');
     var navBlock = document.querySelector('.header__nav');
-    burgerButton.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      navBlock.classList.toggle('header__nav--active');
+
+    var openMenu = function () {
+      navBlock.classList.add('header__nav--active');
+    };
+    var closeMenu = function () {
+      navBlock.classList.remove('header__nav--active');
+    };
+
+    var burgerClickHandler = function () {
+      openMenu();
+    };
+    var closeMenuClickHandler = function () {
+      closeMenu();
+    };
+
+    burgerButton.addEventListener('click', burgerClickHandler);
+
+    document.addEventListener('click', function () {
+      if (navBlock.classList.contains('header__nav--active')) {
+        closeMenu();
+      }
     });
+
   })();
+
+
+/*  (function () {
+    var burgerButton = document.querySelector('.header__burger');
+    var navBlock = document.querySelector('.header__nav');
+
+    var burgerClickHandler = function () {
+      navBlock.classList.add('header__nav--active');
+      closeMenu();
+    };
+
+    var closeMenu = function () {
+      var closeMenuClickHandler = function () {
+        hideMenu();
+      };
+
+      var hideMenu = function () {
+        if (navBlock.classList.contains('header__nav--active')) {
+          navBlock.classList.remove('header__nav--active');
+        }
+        document.removeEventListener('click', closeMenuClickHandler);
+      };
+
+
+      var closingMenu = function () {
+        document.addEventListener('click', closeMenuClickHandler);
+      };
+      closingMenu();
+    };
+
+    burgerButton.addEventListener('click', burgerClickHandler);
+  })();
+*/
 
   // аккордеоны в сервисах
   (function () {
@@ -45,21 +97,27 @@
     var container = document.querySelector('.services__main-list');
     var blocks = document.querySelectorAll('.services__main-item');
 
+    if (window.NodeList && !NodeList.prototype.forEach) {
+      NodeList.prototype.forEach = Array.prototype.forEach;
+    }
+
     clickableItems.forEach(function (element, index) {
       element.addEventListener('click', function (evt) {
-        container.style = '';
+        container.style.height = null;
         evt.preventDefault();
         var activeElement = document.querySelector('.services__main-item--active');
         var media = window.matchMedia('(max-width: 767px)').matches;
 
         if (media) {
-          container.style = 'height: auto;';
+          container.style.height = 'auto;';
           blocks[index].classList.toggle('services__main-item--active');
         } else {
           activeElement.classList.remove('services__main-item--active');
           blocks[index].classList.add('services__main-item--active');
-          container.style = 'height: ' + blocks[index].clientHeight + 'px;';
+          container.style.height = blocks[index].clientHeight + 'px';
         }
+
+        console.log(blocks[index].clientHeight + ', ' + container.style.height);
       });
     });
   })();

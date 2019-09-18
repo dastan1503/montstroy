@@ -73,6 +73,7 @@
   bottom: 11px;
   right: 10px;
   z-index: 2;
+  transition: all 0.2s linear;
 
   & svg {
     width: 16px;
@@ -84,6 +85,7 @@
     background-color: $bg-green;
     opacity: 1;
     border-color: $bg-green;
+    transition: all 0.2s linear;
 
     & svg {
       fill: #575757;

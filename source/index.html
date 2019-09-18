@@ -13,7 +13,7 @@
     <a href="#" class="header__logo">
       <img src="img/logo.png" alt="логотип" srcset="img/logo@2x.png" width="141" height="160">
     </a>
-    <button type="button" class="header__burger">
+    <button type="button" class="header__burger" name="menu-toggle">
       <svg><use xlink:href="img/sprite_auto.svg#burger"></use></svg>
     </button>
     <nav class="header__nav">
@@ -46,8 +46,8 @@
         <p class="main-screen__mobile-text">Работаем на российском рынке с <span>1992</span> года</p>
         <p class="main-screen__full-text">Компания ЗАО &laquo;НСП &laquo;МонтСтрой&raquo; успешно работает на российском рынке с&nbsp;<span>1992</span> года, и за это время зарекомендовала себя как ведущий разработчик качественных систем установок для предприятий, выполняет полный комплекс строительно-монтажных и пуско-наладочных работ по электроснабжению зданий и сооружений.</p>
         <div class="main-screen__buttons-wrapper">
-          <button type="button" class="main-screen__services">Наши услуги</button>
-          <button type="button" class="main-screen__contacts">Связаться с нами</button>
+          <button type="button" class="main-screen__services" name="scroll-to-services">Наши услуги</button>
+          <button type="button" class="main-screen__contacts" name="scroll to contacts">Связаться с нами</button>
         </div>
       </div>
 
@@ -282,31 +282,31 @@
     <section class="partners">
       <div class="partners__header-wrapper">
         <h2><span>Наши&nbsp;</span>Партнеры</h2>
-        <button type="button" class="partners__toggle-button">
+        <button type="button" class="partners__toggle-button" name="prev-partner">
           <svg><use xlink:href="img/sprite_auto.svg#arrow"></use></svg>
         </button>
-        <button type="button" class="partners__toggle-button">
+        <button type="button" class="partners__toggle-button" name="next-partner">
           <svg><use xlink:href="img/sprite_auto.svg#arrow"></use></svg>
         </button>
       </div>
       <ul>
         <li>
-          <a href="#">
+          <a href="#" title="Ava company">
             <img src="img/ava.jpg" alt="Ava company" srcset="img/ava@2x.jpg" width="149" height="79" >
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" title="бизнес-центр Mirror">
             <img src="img/mirror.jpg" alt="бизнес-центр Mirror" srcset="img/mirror@2x.jpg" width="92" height="101">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" title="охранное предприятие Shield">
             <img src="img/shield.jpg" alt="охранное предприятие Shield" srcset="img/shield@2x.jpg" width="173" height="71">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" title="ТЕПЛОДОМЭНЕРГ">
             <img src="img/teplodom.jpg" alt="ТЕПЛОДОМЭНЕРГ" srcset="img/teplodom@2x.jpg" width="133" height="97">
           </a>
         </li>
@@ -315,7 +315,7 @@
 
     <article class="map">
       <h2>Контакты</h2>
-      <iframe src="https://yandex.ru/map-widget/v1/-/CGSY60ll"></iframe>
+      <iframe title="карта" src="https://yandex.ru/map-widget/v1/-/CGSY60ll"></iframe>
       <div class="map__contacts">
         <ul>
           <li>
@@ -351,14 +351,14 @@
         <textarea placeholder="Сообщение"></textarea>
         <p>Заполняя форму на сайте, вы соглашаетесь с нашей</p>
         <a href="#">Политикой конфиденциальности</a>
-        <button type="submit">Отправить</button>
+        <button type="submit" name="send">Отправить</button>
       </form>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer__wrapper">
-      <a href="#" class="footer__logo">
+      <a href="#" class="footer__logo" title="логотип">
         <img src="img/logo.png" alt="логотип" srcset="img/logo@2x.png" width="141" height="160">
       </a>
       <p class="footer__name">ЗАО &laquo;НСП &laquo;МонтСтрой&raquo;</p>
