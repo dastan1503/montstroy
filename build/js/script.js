@@ -34,62 +34,34 @@
     var burgerButton = document.querySelector('.header__burger');
     var navBlock = document.querySelector('.header__nav');
 
-    var openMenu = function () {
-      navBlock.classList.add('header__nav--active');
-    };
     var closeMenu = function () {
-      navBlock.classList.remove('header__nav--active');
-    };
+      var closeMenuHandler = function (evt) {
+        var flyoutElement = document.querySelector('.header__nav');
+        var targetElement = evt.target;  // clicked element
+        do {
+          if (targetElement == flyoutElement) {
+            return;
+          }
+          targetElement = targetElement.parentNode;
+        } while (targetElement);
 
-    var burgerClickHandler = function () {
-      openMenu();
-    };
-    var closeMenuClickHandler = function () {
-      closeMenu();
-    };
+        navBlock.classList.remove('header__nav--active');
+        console.log(evt);
+        document.removeEventListener('click', closeMenuHandler);
+        console.log(evt);
+      };
 
-    burgerButton.addEventListener('click', burgerClickHandler);
-
-    document.addEventListener('click', function () {
       if (navBlock.classList.contains('header__nav--active')) {
-        closeMenu();
+        document.addEventListener("click", closeMenuHandler);
       }
-    });
+    };
 
-  })();
-
-
-/*  (function () {
-    var burgerButton = document.querySelector('.header__burger');
-    var navBlock = document.querySelector('.header__nav');
-
-    var burgerClickHandler = function () {
-      navBlock.classList.add('header__nav--active');
+    burgerButton.addEventListener('click', function (evt) {
+      evt.stopPropagation();
+      navBlock.classList.toggle('header__nav--active');
       closeMenu();
-    };
-
-    var closeMenu = function () {
-      var closeMenuClickHandler = function () {
-        hideMenu();
-      };
-
-      var hideMenu = function () {
-        if (navBlock.classList.contains('header__nav--active')) {
-          navBlock.classList.remove('header__nav--active');
-        }
-        document.removeEventListener('click', closeMenuClickHandler);
-      };
-
-
-      var closingMenu = function () {
-        document.addEventListener('click', closeMenuClickHandler);
-      };
-      closingMenu();
-    };
-
-    burgerButton.addEventListener('click', burgerClickHandler);
+    });
   })();
-*/
 
   // аккордеоны в сервисах
   (function () {
