@@ -3,6 +3,7 @@
       .cls-1 {
         fill-rule: evenodd;
         filter: url(#filter);
+        fill: #000000;
       }
     </style>
     <filter id="filter" x="292" y="1065" width="8" height="5" filterUnits="userSpaceOnUse">

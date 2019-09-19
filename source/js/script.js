@@ -34,33 +34,28 @@
     var burgerButton = document.querySelector('.header__burger');
     var navBlock = document.querySelector('.header__nav');
 
-    var closeMenu = function () {
-      var closeMenuHandler = function (evt) {
-        var flyoutElement = document.querySelector('.header__nav');
-        var targetElement = evt.target;  // clicked element
-        do {
-          if (targetElement == flyoutElement) {
-            return;
-          }
-          targetElement = targetElement.parentNode;
-        } while (targetElement);
+    var toggleMenu = function () {
+      navBlock.classList.toggle('header__nav--active');
+    };
 
-        navBlock.classList.remove('header__nav--active');
-        console.log(evt);
-        document.removeEventListener('click', closeMenuHandler);
-        console.log(evt);
-      };
+    var documentClickHandler = function (evt) {
+      var target = evt.target;
+      do {
+        if (target === navBlock) {
+          return;
+        }
+        target = target.parentNode;
+      } while (target);
 
-      if (navBlock.classList.contains('header__nav--active')) {
-        document.addEventListener("click", closeMenuHandler);
-      }
+      navBlock.classList.remove('header__nav--active');
     };
 
     burgerButton.addEventListener('click', function (evt) {
       evt.stopPropagation();
-      navBlock.classList.toggle('header__nav--active');
-      closeMenu();
+      toggleMenu();
     });
+
+    document.addEventListener('click', documentClickHandler);
   })();
 
   // аккордеоны в сервисах
@@ -86,11 +81,50 @@
         } else {
           activeElement.classList.remove('services__main-item--active');
           blocks[index].classList.add('services__main-item--active');
-          container.style.height = blocks[index].clientHeight + 'px';
+          container.style.height = blocks[index].scrollHeight + 'px';
         }
-
-        console.log(blocks[index].clientHeight + ', ' + container.style.height);
       });
     });
+  })();
+
+  // запуск полифилла для svg-спрайта
+  (function () {
+    svg4everybody();
+  })();
+
+  // инициализация слайдеров
+  (function () {
+    var mySwiper1 = new Swiper ('.main-screen__slider', {
+      init: false,
+      direction: 'horizontal',
+      centeredSlides: true,
+      loop: true,
+      initialSlide: 1,
+      slidesPerView: 'auto',
+      slideToClickedSlide: true,
+
+      pagination: {
+        el: '.swiper-pagination',
+      }
+    });
+
+    var mySwiper2 = new Swiper ('.partners__slider', {
+      init: false,
+      direction: 'horizontal',
+      centeredSlides: true,
+      loop: true,
+      initialSlide: 1,
+      slidesPerView: 'auto',
+      slideToClickedSlide: true,
+
+      pagination: {
+        el: '.partners__slider .swiper-pagination',
+      }
+    });
+
+    if (window.matchMedia('(max-width: 1200px)').matches) {
+      mySwiper1.init();
+      mySwiper2.init();
+    }
   })();
 })();

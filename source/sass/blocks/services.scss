@@ -199,6 +199,10 @@
   .services__main-item--active {
     width: 100%;
     order: 0;
+
+    & .services__nested-list {
+      display: block;
+    }
   }
 
   .services__nested-list li {

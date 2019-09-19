@@ -93,15 +93,16 @@
   margin: 0 auto;
 }
 
+.swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .main-screen__slider .swiper-slide {
   display: flex;
   flex-direction: column;
   width: 235px;
   align-items: center;
-}
-
-.swiper-slide-active {
-  background-color: green;
 }
 
 .swiper-pagination {
@@ -169,23 +170,18 @@
     width: 100%;
   }
 
-  .main-screen__slider {
+  .main-screen__slider.swiper-container {
     width: calc(100% - 50px);
-    padding: 0 25px;
+    padding: 50px 25px 0;
     height: 275px;
     margin: 0;
     background-color: #ffffff;
-  }
-
-  .main-screen__slider .swiper-container {
-    width: 100%;
-    margin: 0;
+    opacity: 1;
   }
 
   .main-screen__slider .swiper-slide {
     width: calc(100% / 3 - 80px);
     padding: 25px 40px 35px;
-    opacity: 0.5;
     z-index: 0;
     height: 103px;
     background-color: #ffffff;
@@ -198,17 +194,35 @@
     opacity: 1;
   }
 
-  .main-screen__slider p {
-    color: #000000;
-    font-size: 12px;
-  }
-
   .swiper-pagination {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: auto;
   }
 
+  .main-screen__slider .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+
+  .main-screen__slider .swiper-pagination-bullet-active {
+    background-color: $bg-green;
+    width: 8px;
+    height: 8px;
+  }
+
+  .main-screen__slider p {
+    color: #000000;
+    font-size: 12px;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
   .main-screen__slider svg {
+    width: 70px;
+    height: 70px;
     fill: #000000;
   }
 }
@@ -224,6 +238,7 @@
     padding: 130px 0 0;
     width: calc(100% - 40px);
     margin: 0;
+    min-height: auto;
   }
 
   .main-screen h2 {
@@ -284,19 +299,25 @@
     min-height: 60px;
   }
 
-  .main-screen__slider {
+  .main-screen__slider.swiper-container {
     width: 100%;
     height: 230px;
     padding: 0;
+    margin-top: 0;
   }
 
   .main-screen__slider .swiper-slide {
     box-shadow: none;
-    width: calc(100% - 42px);
+    width: calc(100% - 142px);
+    margin: 0 20px;
     height: 155px;
     border: $border-gray;
     transform: none;
     padding: 25px 50px 20px;
+  }
+
+  .main-screen__slider .swiper-slide-active {
+    transform: none;
   }
 
   .main-screen__slider p {
