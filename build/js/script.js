@@ -70,19 +70,8 @@
 
     clickableItems.forEach(function (element, index) {
       element.addEventListener('click', function (evt) {
-        container.style.height = null;
         evt.preventDefault();
-        var activeElement = document.querySelector('.services__main-item--active');
-        var media = window.matchMedia('(max-width: 767px)').matches;
-
-        if (media) {
-          container.style.height = 'auto;';
-          blocks[index].classList.toggle('services__main-item--active');
-        } else {
-          activeElement.classList.remove('services__main-item--active');
-          blocks[index].classList.add('services__main-item--active');
-          container.style.height = blocks[index].scrollHeight + 'px';
-        }
+        blocks[index].classList.toggle('services__main-item--active');
       });
     });
   })();
@@ -94,7 +83,7 @@
 
   // инициализация слайдеров
   (function () {
-    var mySwiper1 = new Swiper ('.main-screen__slider', {
+    var mySwiper1 = new Swiper('.main-screen__slider', {
       init: false,
       direction: 'horizontal',
       centeredSlides: true,
@@ -108,7 +97,7 @@
       }
     });
 
-    var mySwiper2 = new Swiper ('.partners__slider', {
+    var mySwiper2 = new Swiper('.partners__slider', {
       init: false,
       direction: 'horizontal',
       centeredSlides: true,

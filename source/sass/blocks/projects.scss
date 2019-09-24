@@ -65,8 +65,7 @@
   width: 42px;
   height: 30px;
   position: absolute;
-  opacity: 0.34;
-  border: 2px solid #ffffff;
+  border: 2px solid $gray-text;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,22 +73,15 @@
   right: 10px;
   z-index: 2;
   transition: all 0.2s linear;
-
-  & svg {
-    width: 16px;
-    height: 6px;
-    fill: #ffffff;
-  }
+  background-image: url("../img/arrow.svg");
+  background-position: center center;
+  background-size: 16px 6px;
+  background-repeat: no-repeat;
 
   &:hover {
     background-color: $bg-green;
-    opacity: 1;
     border-color: $bg-green;
     transition: all 0.2s linear;
-
-    & svg {
-      fill: #575757;
-    }
   }
 }
 
@@ -159,6 +151,16 @@
         font-size: 24px;
       }
     }
+
+    & a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
   }
 
   .projects p {
@@ -200,10 +202,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .projects__item a {
-    left: calc(50% - 23px);
-    height: 20px;
   }
 }

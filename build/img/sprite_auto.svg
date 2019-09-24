@@ -11,7 +11,9 @@
       <feComposite result="composite" operator="in" in2="SourceGraphic"/>
       <feBlend result="blend" in2="SourceGraphic"/>
     </filter>
-  </defs><symbol id="arrow" viewBox="0 0 16 6"><path d="M16.000,3.000 L12.000,6.000 L12.000,4.000 L-0.000,4.000 L-0.000,2.000 L12.000,2.000 L12.000,-0.000 L16.000,3.000 Z"/></symbol><symbol id="arrowdown" viewBox="0 0 8 5">
+  </defs><symbol id="arrow" viewBox="0 0 16 6">
+  <path id="&#x441;&#x442;&#x440;&#x435;&#x43B;&#x43A;&#x430;" class="cls-1" d="M635,2692v6l4-3Zm-12,2h13v2H623v-2Z" transform="translate(-623 -2692)"/>
+</symbol><symbol id="arrowdown" viewBox="0 0 8 5">
   <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
