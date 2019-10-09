@@ -124,10 +124,9 @@
     }
   }
 
-
   .services__main-item--active {
     width: calc(50% - 10px);
-    margin-bottom: 0;
+    margin-bottom: 10px;
 
     & .services__nested-list {
       display: block;

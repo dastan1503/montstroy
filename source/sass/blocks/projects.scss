@@ -139,7 +139,7 @@
   .projects__item {
     width: calc(100% - 120px);
     padding: 45px 80px 45px 40px;
-    height: 90px;
+    min-height: calc((100vw - 40px) * (90 / 724));
     margin-bottom: 10px;
 
     &--long {
@@ -198,7 +198,8 @@
     }
     padding: 0;
     width: 100%;
-    min-height: 100px;
+    min-height: calc((100vw - 40px) * (100 / 724));
+
     display: flex;
     align-items: center;
     justify-content: center;

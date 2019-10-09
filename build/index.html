@@ -38,7 +38,7 @@
       </ul>
     </nav>
     <a href="tel:+74954526723" class="header__tel">+7 (495) 452-67-23</a>
-    <a href="#" class="header__scroll">Обратная связь</a>
+    <a href="#form" class="header__scroll">Обратная связь</a>
   </header>
 
   <main class="main">
@@ -48,9 +48,9 @@
         <p class="main-screen__mobile-text">Работаем на российском рынке с <span>1992</span> года</p>
         <p class="main-screen__full-text">Компания ЗАО &laquo;НСП &laquo;МонтСтрой&raquo; успешно работает на российском рынке с&nbsp;<span>1992</span> года, и за это время зарекомендовала себя как ведущий разработчик качественных систем установок для предприятий, выполняет полный комплекс строительно-монтажных и пуско-наладочных работ по электроснабжению зданий и сооружений.</p>
         <div class="main-screen__buttons-wrapper">
-          <button type="button" class="main-screen__services" name="scroll-to-services">Наши услуги</button>
-          <button type="button" class="main-screen__contacts" name="scroll to contacts">Связаться с нами</button>
-        </div>
+          <a href="#services" class="main-screen__services" name="scroll-to-services">Наши услуги</a>
+          <a href="#contacts" class="main-screen__contacts" name="scroll to contacts">Связаться с нами
+        </a></div>
       </div>
 
       <div class="main-screen__slider swiper-container">
@@ -72,7 +72,7 @@
       </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
       <h2>Услуги</h2>
       <ul class="services__main-list">
         <li class="services__main-item services__main-item--active">
@@ -296,25 +296,25 @@
           <li class="swiper-slide">
             <a href="#">
               <span class="visually-hidden">Переход нм страницу партнера "Ava company"</span>
-              <img src="img/ava.jpg" alt="Ava company" srcset="img/ava@2x.jpg 2x" width="149" height="79">
+              <img src="img/ava.png" alt="Ava company" srcset="img/ava@2x.png 2x" width="149" height="79">
             </a>
           </li>
           <li class="swiper-slide">
             <a href="#">
               <span class="visually-hidden">Переход нм страницу партнера бизнес-центр Mirror</span>
-              <img src="img/mirror.jpg" alt="бизнес-центр Mirror" srcset="img/mirror@2x.jpg 2x" width="92" height="101">
+              <img src="img/mirror.png" alt="бизнес-центр Mirror" srcset="img/mirror@2x.png 2x" width="92" height="101">
             </a>
           </li>
           <li class="swiper-slide">
             <a href="#">
               <span class="visually-hidden">Переход нм страницу партнера охранное предприятие Shield</span>
-              <img src="img/shield.jpg" alt="охранное предприятие Shield" srcset="img/shield@2x.jpg 2x" width="173" height="71">
+              <img src="img/shield.png" alt="охранное предприятие Shield" srcset="img/shield@2x.png 2x" width="173" height="71">
             </a>
           </li>
           <li class="swiper-slide">
             <a href="#">
               <span class="visually-hidden">Переход нм страницу партнера ТЕПЛОДОМЭНЕРГ</span>
-              <img src="img/teplodom.jpg" alt="ТЕПЛОДОМЭНЕРГ" srcset="img/teplodom@2x.jpg 2x" width="133" height="97">
+              <img src="img/teplodom.png" alt="ТЕПЛОДОМЭНЕРГ" srcset="img/teplodom@2x.png 2x" width="133" height="97">
             </a>
           </li>
         </ul>
@@ -322,7 +322,7 @@
       </div>
     </section>
 
-    <article class="map">
+    <article class="map" id="contacts">
       <h2>Контакты</h2>
       <iframe title="карта" src="https://yandex.ru/map-widget/v1/-/CGSY60ll"></iframe>
       <div class="map__contacts">
@@ -347,22 +347,6 @@
         </ul>
       </div>
     </article>
-
-    <section class="form">
-      <h2>Свяжитесь с нами</h2>
-      <form>
-        <label for="name" class="visually-hidden">имя</label>
-        <input type="text" placeholder="Имя" id="name" required="">
-        <label for="tel" class="visually-hidden">телефон</label>
-        <input type="tel" placeholder="Телефон" id="tel" required="" pattern="(\+?\d[- .]*){7,13}">
-        <label for="email" class="visually-hidden">email</label>
-        <input type="email" placeholder="E-mail" id="email" required="">
-        <textarea placeholder="Сообщение" required=""></textarea>
-        <p>Заполняя форму на сайте, вы соглашаетесь с нашей</p>
-        <a href="#">Политикой конфиденциальности</a>
-        <button type="submit" name="send">Отправить</button>
-      </form>
-    </section>
   </main>
 
   <footer class="footer">
@@ -434,11 +418,30 @@
           </li>
         </ul>
       </div>
+    </div>
 
-      <div class="footer__copyright">
-        <p>1992-2018 &copy; ЗАО "НСП "МонтСтрой".&nbsp;</p>
-        <p>Все права защищены</p>
-      </div>
+    <section class="footer__form form" id="form">
+      <h2>Свяжитесь с нами</h2>
+      <form>
+        <label for="name" class="visually-hidden">имя</label>
+        <input type="text" placeholder="Имя" id="name" required="">
+        <label for="tel" class="visually-hidden">телефон</label>
+        <input type="tel" placeholder="Телефон" id="tel" required="" pattern="(\+?\d[- .]*){7,13}">
+        <label for="email" class="visually-hidden">email</label>
+        <input type="email" placeholder="E-mail" id="email" required="">
+        <label for="message" class="visually-hidden">Ваше сообщение</label>
+        <textarea placeholder="Сообщение" required="" id="message"></textarea>
+        <div class="form__agreement">
+          <p>Заполняя форму на сайте, вы соглашаетесь с нашей</p>
+          <a href="#">Политикой конфиденциальности</a>
+        </div>
+        <button type="submit" name="send">Отправить</button>
+      </form>
+    </section>
+
+    <div class="footer__copyright">
+      <p>1992-2018 &copy; ЗАО "НСП "МонтСтрой".&nbsp;</p>
+      <p>Все права защищены</p>
     </div>
   </footer>
 

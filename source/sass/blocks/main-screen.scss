@@ -51,6 +51,12 @@
   display: flex;
 }
 
+.main-screen__buttons-wrapper a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-screen__services {
   color: #000000;
   font-weight: 900;
@@ -177,6 +183,10 @@
     margin: 0;
     background-color: #ffffff;
     opacity: 1;
+  }
+
+  .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
+    opacity: 0;
   }
 
   .main-screen__slider .swiper-slide {

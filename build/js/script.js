@@ -61,7 +61,6 @@
   // аккордеоны в сервисах
   (function () {
     var clickableItems = document.querySelectorAll('.services__main-item h3');
-    var container = document.querySelector('.services__main-list');
     var blocks = document.querySelectorAll('.services__main-item');
 
     if (window.NodeList && !NodeList.prototype.forEach) {

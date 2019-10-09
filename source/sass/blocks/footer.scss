@@ -3,11 +3,16 @@
   width: 100%;
   color: #ffffff;
   padding-top: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
 }
 
 .footer__wrapper {
-  position: relative;
-  width: calc(100% - 30px);
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
@@ -70,6 +75,7 @@
 }
 
 .footer__copyright {
+  width: 100%;
   opacity: 0.25;
   display: flex;
   justify-content: center;
