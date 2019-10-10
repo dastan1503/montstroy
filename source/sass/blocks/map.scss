@@ -35,23 +35,23 @@
   margin: 0;
 }
 
-.map__contacts li {
+.map__contacts-item {
   margin-bottom: 45px;
+}
 
-  & p,
-  & a {
-    position: relative;
-    margin: 0;
+.map__contacts-item p,
+.map__contacts-item a {
+  position: relative;
+  margin: 0;
+}
 
-    & svg {
-      position: absolute;
-      top: 3px;
-      left: -30px;
-      width: 16px;
-      height: 16px;
-      fill: $bg-green;
-    }
-  }
+.map__contacts-item svg {
+  position: absolute;
+  top: 3px;
+  left: -30px;
+  width: 16px;
+  height: 16px;
+  fill: $bg-green;
 }
 
 .map__adress {
@@ -87,17 +87,14 @@
     left: calc(50% + 160px);
   }
 
-  .map__contacts li {
+  .map__contacts-item {
     margin-bottom: 45px;
+  }
 
-    & p,
-    & a {
-      & svg {
-        position: absolute;
-        top: 3px;
-        left: -25px;
-      }
-    }
+  .map__contacts-item svg {
+    position: absolute;
+    top: 3px;
+    left: -25px;
   }
 
   .map__adress {
@@ -138,15 +135,15 @@
     background-color: #000000;
     width: calc(100% - 165px);
     padding: 20px 65px 15px 100px;
+  }
 
-    & li {
-      margin-bottom: 10px;
+  .map__contacts-item {
+    margin-bottom: 10px;
+  }
 
-      & p,
-      & a {
-        line-height: 20px;
-      }
-    }
+  .map__contacts-item p,
+  .map__contacts-item a {
+    line-height: 20px;
   }
 
   .map__time {

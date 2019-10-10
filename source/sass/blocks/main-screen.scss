@@ -164,7 +164,7 @@
     margin-bottom: 85px;
   }
 
-  .main-screen button {
+  .main-screen__buttons-wrapper a {
     width: calc(50% - 10px);
     font-size: 16px;
   }
@@ -302,7 +302,7 @@
     border: 1px solid $bg-green;
   }
 
-  .main-screen__buttons-wrapper button {
+  .main-screen__buttons-wrapper a {
     width: 100%;
     margin: 0;
     margin-bottom: 10px;
