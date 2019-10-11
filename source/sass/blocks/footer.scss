@@ -5,16 +5,15 @@
   padding-top: 65px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
   align-items: flex-start;
   align-content: flex-start;
 }
 
 .footer__wrapper {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 0 15px;
+  width: 295px;
+  padding: 0;
 }
 
 .footer__nav {
@@ -54,23 +53,12 @@
   }
 }
 
-.footer__contacts {
-  display: none;
-}
-
 .footer__name {
   font-size: 16px;
   line-height: 38px;
   opacity: 0.9;
   margin-top: 40px;
   margin-bottom: 45px;
-}
-
-.footer__time {
-  font-size: 13px;
-  display: block;
-  line-height: 15px;
-  opacity: 0.6;
 }
 
 .footer__copyright {
@@ -83,13 +71,12 @@
   padding-bottom: 20px;
   font-size: 10px;
   letter-spacing: 0.7px;
-  margin-top: 100px;
 }
 
 @media (max-width: 1199px) {
   .footer {
-    padding-top: 330px;
     position: relative;
+    padding-top: 0;
   }
 
   .footer__wrapper {
@@ -99,6 +86,7 @@
     width: calc(100% - 130px);
     padding: 0 65px;
     justify-content: space-between;
+    margin-top: 20px;
   }
 
   .footer__logo {
@@ -162,7 +150,9 @@
     flex-direction: column;
     width: 100%;
     padding: 0;
+    margin-top: 0;
     background-color: $bg-footer-gray;
+    order: 1;
   }
 
   .footer__nav ul {
@@ -184,43 +174,6 @@
     width: calc(100% - 20px);
   }
 
-  .footer__contacts {
-    padding-top: 20px;
-    display: block;
-  }
-
-  .footer__contacts ul {
-    padding: 0 110px 0 60px;
-    margin: 0;
-    list-style-type: none;
-  }
-
-  .footer__contacts-item {
-    margin-bottom: 10px;
-  }
-
-  .footer__contacts-item p,
-  .footer__contacts-item a {
-    position: relative;
-    margin: 0;
-    color: $bg-gray;
-    opacity: 0.5;
-  }
-
-  .footer__contacts-item svg {
-    position: absolute;
-    top: 3px;
-    left: -25px;
-    width: 16px;
-    height: 16px;
-    fill: $bg-gray;
-    opacity: 0.5;
-  }
-
-  .footer__adress {
-    opacity: 0.5;
-  }
-
   .footer__name {
     display: none;
   }
@@ -231,6 +184,7 @@
     background-color: #000000;
     min-height: 50px;
     line-height: 15px;
+    order: 2;
   }
 
   .footer__copyright p {

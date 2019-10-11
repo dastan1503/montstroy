@@ -119,8 +119,7 @@
     order: -1;
     width: 42%;
     min-height: 320px;
-    left: 65px;
-    bottom: 170px;
+    margin-top: -115px;
     padding: 35px 45px 30px 45px;
   }
 
@@ -169,6 +168,7 @@
     width: calc(100% - 40px);
     padding: 45px 20px 60px 20px;
     margin-top: 0;
+    order: 0;
   }
 
   .form p {

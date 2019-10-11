@@ -196,6 +196,10 @@
     margin-top: 5px;
   }
 
+  .partners__slider {
+    padding-top: 0;
+  }
+
   .partners h2 {
     justify-content: flex-start;
     font-size: 20px;
@@ -208,8 +212,11 @@
   .partners .swiper-slide {
     border: 1px solid $bg-gray;
     box-shadow: none;
-    width: calc(100% - 40px);
-    margin: 0 20px;
+    width: 100%;
+
+    &:not(.swiper-slide-active) {
+      opacity: 0;
+    }
 
     &-active {
       transform: none;

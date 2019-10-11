@@ -1,0 +1,148 @@
+.contacts--color {
+  width: 170px;
+  padding-left: 125px;
+  color: #ffffff;
+}
+
+.contacts ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contacts__item {
+  margin-bottom: 45px;
+}
+
+.contacts__item p,
+.contacts__item a {
+  position: relative;
+  margin: 0;
+}
+
+.contacts__item svg {
+  position: absolute;
+  top: 3px;
+  left: -30px;
+  width: 16px;
+  height: 16px;
+  fill: $bg-green;
+}
+
+.contacts__adress {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.contacts__time {
+  font-size: 13px;
+  display: block;
+  line-height: 15px;
+  opacity: 0.6;
+}
+
+.contacts a {
+  color: #ffffff;
+  transition: all 0.2s linear;
+
+  &:hover {
+    opacity: 0.5;
+    transition: all 0.2s linear;
+  }
+}
+
+.contacts--gray {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .contacts--color {
+    width: 170px;
+    order: -1;
+    margin-top: 30px;
+  }
+
+  .contacts__item {
+    margin-bottom: 45px;
+  }
+
+  .contacts__item svg {
+    position: absolute;
+    top: 3px;
+    left: -25px;
+  }
+
+  .contacts__adress {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .contacts a {
+    font-size: 14px;
+  }
+
+  .contacts__time {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts {
+    background-color: #000000;
+    width: calc(100% - 90px);
+    padding: 70px 20px 20px 20px;
+  }
+
+  .contacts--color {
+    order: -1;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  .contacts--color p {
+    opacity: 1;
+  }
+
+  .contacts__item {
+    margin-bottom: 10px;
+  }
+
+  .contacts__time {
+    line-height: 15px;
+  }
+
+  .contacts--gray {
+    padding-top: 20px;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  .contacts ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .contacts--gray p,
+  .contacts--gray a {
+    position: relative;
+    margin: 0;
+    color: $bg-gray;
+    opacity: 0.5;
+  }
+
+  .contacts--gray svg {
+    position: absolute;
+    top: 3px;
+    left: -25px;
+    width: 16px;
+    height: 16px;
+    fill: $bg-gray;
+    opacity: 0.5;
+  }
+
+  .contacts__adress {
+    opacity: 0.5;
+  }
+}
