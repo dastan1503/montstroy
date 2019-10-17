@@ -2,7 +2,7 @@
   width: calc(100% - 30px);
   max-width: 1170px;
   margin: 0 auto;
-  padding: 60px 15px 130px;
+  padding: 65px 15px 130px;
   position: relative;
 }
 
@@ -95,7 +95,7 @@
 
 .partners .swiper-slide {
   width: calc((100% - 90px) / 4);
-  min-height: 135px;
+  height: 135px;
   display: flex;
 }
 
@@ -116,12 +116,13 @@
   height: 100%;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: $width-t) {
   .partners {
     width: calc(100% - 40px);
     padding: 0 20px;
     margin: 0;
     margin-top: 40px;
+    margin-bottom: 60px;
   }
 
   .partners h2 {
@@ -142,8 +143,8 @@
   }
 
   .partners__slider {
-    width: calc(100% - 50px);
-    padding: 50px 25px 0;
+    width: calc(100%);
+    padding: 10px 0 0;
     margin: 0;
     overflow: hidden;
   }
@@ -191,9 +192,10 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width-m) {
   .partners {
     margin-top: 5px;
+    margin-bottom: 20px;
   }
 
   .partners__slider {
@@ -203,16 +205,24 @@
   .partners h2 {
     justify-content: flex-start;
     font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    line-height: 25px;
   }
 
   .partners h2 span {
     display: none;
   }
 
+  .partners .swiper-wrapper {
+    padding-bottom: 30px;
+  }
+
   .partners .swiper-slide {
     border: 1px solid $bg-gray;
     box-shadow: none;
-    width: 100%;
+    width: calc(100% - 2px);
+    margin-left: -20px;
 
     &:not(.swiper-slide-active) {
       opacity: 0;

@@ -1,6 +1,7 @@
 .form {
   margin-top: -250px;
-  width: 400px;
+  width: calc(100% - 590px - 180px);
+  max-width: 400px;
   min-height: 490px;
   padding: 55px 105px 35px 75px;
   z-index: 10;
@@ -15,6 +16,7 @@
   color: #000000;
   text-align: center;
   margin-top: 0;
+  margin-bottom: 60px;
   letter-spacing: 1px;
 }
 
@@ -23,47 +25,49 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  color: #000000;
 }
 
-.form input,
-.form textarea {
+.form label {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  border-bottom: 1px solid $bg-gray;
+  height: 50px;
+  margin-bottom: 40px;
+}
+
+label.form__message {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+form span {
+  height: 25px;
+}
+
+.form input {
   color: #000000;
   font-size: 20px;
-  line-height: 50px;
   border: none;
-  border-bottom: 1px solid $bg-gray;
+  padding: 0;
+  margin: 0;
   resize: none;
-  outline: none;
-  height: 80px;
-  margin-bottom: 15px;
-
-  &::placeholder {
-    color: #000000;
-    font-size: 20px;
-    line-height: 50px;
-  }
-}
-
-.form textarea {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  font-family: inherit;
-}
-
-.form [type="email"] {
   width: 100%;
 }
 
-.form [type="text"] {
-  width: calc((100% - 35px) / 2);
-  padding: 0;
+.form__name {
   margin-right: 35px;
+  width: calc(100% / 2 - 18px);
 }
 
-.form [type="tel"] {
-  width: calc((100% - 35px) / 2);
-  padding: 0;
+.form__tel {
+  width: calc(100% / 2 - 18px);
+}
+
+.form__email,
+.form__message {
+  width: 100%;
 }
 
 .form__agreement {
@@ -114,30 +118,34 @@
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: $width-t) {
   .form {
     order: -1;
-    width: 42%;
+    width: 41%;
     min-height: 320px;
-    margin-top: -115px;
-    padding: 35px 45px 30px 45px;
+    margin-top: -120px;
+    padding: 35px 45px 30px 50px;
   }
 
   .form h2 {
     font-size: 18px;
+    margin-bottom: 40px;
   }
 
-  .form input,
-  .form textarea {
+  .form label {
     font-size: 14px;
-    line-height: 36px;
-    margin-bottom: 15px;
-    height: 55px;
+    margin-bottom: 25px;
+    height: 40px;
+  }
 
-    &::placeholder {
-      font-size: 14px;
-      line-height: 36px;
-    }
+  label.form__message {
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+
+  .form span {
+    height: 15px;
   }
 
   .form p {
@@ -155,14 +163,14 @@
   }
 
   .form button {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 16px;
     width: 165px;
-    min-height: 45px;
+    min-height: 40px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width-m) {
   .form {
     position: static;
     width: calc(100% - 40px);
@@ -177,7 +185,7 @@
   }
 
   .form h2 {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
 
   .form a {
@@ -188,7 +196,12 @@
     }
   }
 
+  .form__agreement {
+    margin-top: 10px;
+  }
+
   .form button {
     margin-top: 30px;
+    min-height: 45px;
   }
 }

@@ -28,13 +28,14 @@
 }
 
 .projects__list {
-  width: 100%;
+  width: calc(100% + 5px);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  margin-left: -5px;
 }
 
 .projects__item {
@@ -42,12 +43,13 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;
-  width: calc((100% - 15px) / 4 - 40px);
-  padding: 55px 10px 20px 30px;
+  width: calc(100% / 4 - 45px);
+  padding: 55px 10px 15px 30px;
   margin-bottom: 5px;
+  margin-left: 5px;
 
   &--long {
-    width: calc((100% - 5px) / 2 - 110px);
+    width: calc(100% / 2 - 115px);
     padding: 50px 80px 45px 30px;
   }
 }
@@ -111,7 +113,7 @@
   font-weight: 700;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: $width-t) {
   .projects {
     width: calc(100% - 40px);
     padding: 0 20px;
@@ -120,6 +122,7 @@
 
   .projects__list {
     flex-direction: column;
+    margin-left: 0;
   }
 
   .projects h2 {
@@ -139,18 +142,20 @@
 
   .projects__item {
     width: calc(100% - 120px);
-    padding: 45px 80px 45px 40px;
-    min-height: calc((100vw - 40px) * (90 / 724));
+    padding: 45px 80px 20px 40px;
+    min-height: calc((100vw - 40px) * (180 / 724) - 65px);
     margin-bottom: 10px;
+    margin-left: 0;
 
     &--long {
-      padding: 45px 80px 45px 40px;
+      padding: 45px 80px 20px 40px;
       width: calc(100% - 120px);
+      min-height: calc((100vw - 40px) * (180 / 724) - 65px);
       font-size: 24px;
     }
   }
 
-  .progects__item--long h3 {
+  .projects__item--long h3 {
     font-size: 24px;
   }
 
@@ -168,6 +173,8 @@
     font-size: 18px;
     line-height: 22px;
     opacity: 0.66;
+    margin-bottom: 0;
+    margin-top: 15px;
   }
 
   .projects span {
@@ -175,7 +182,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width-m) {
   .projects p {
     display: none;
   }
@@ -192,6 +199,10 @@
     font-weight: 700;
   }
 
+  .projects__list {
+    width: 100%;
+  }
+
   .projects__item {
     &--long {
       padding: 0;
@@ -199,7 +210,7 @@
     }
     padding: 0;
     width: 100%;
-    min-height: calc((100vw - 40px) * (100 / 724));
+    min-height: calc((100vw - 40px) * (100 / 280));
     display: flex;
     align-items: center;
     justify-content: center;

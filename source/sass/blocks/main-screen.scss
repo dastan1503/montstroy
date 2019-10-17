@@ -15,7 +15,7 @@
   margin: 0 auto;
   max-width: 1170px;
   width: calc(100% - 30px);
-  padding: 150px 15px 120px;
+  padding: 150px 15px 115px;
 }
 
 .main-screen h2 {
@@ -40,7 +40,7 @@
   color: #ffffff;
   line-height: 38px;
   margin-top: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 }
 
 .main-screen__full-text span {
@@ -93,8 +93,7 @@
 
 .main-screen__slider {
   max-width: 1170px;
-  width: calc(100% - 30px);
-  padding: 0 15px;
+  width: calc(100%);
   height: 210px;
   margin: 0 auto;
 }
@@ -107,7 +106,7 @@
 .main-screen__slider .swiper-slide {
   display: flex;
   flex-direction: column;
-  width: 235px;
+  width: 200px;
   align-items: center;
 }
 
@@ -120,20 +119,28 @@
   opacity: 0.7;
   width: 74px;
   height: 69px;
+  transition: all 200ms linear;
+}
+
+.swiper-slide:hover svg,
+.swiper-slide:hover p {
+  opacity: 1;
+  transition: all 200ms linear;
 }
 
 .main-screen__slider p {
   font-size: 15px;
   line-height: 20px;
-  width: 235px;
+  width: 100%;
   margin-top: 25px;
   text-align: center;
   color: #ffffff;
   opacity: 0.6;
+  transition: all 200ms linear;
 }
 
 
-@media (max-width: 1199px) {
+@media (max-width: $width-t) {
   .main-screen {
     background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0.3) 100%), url("../img/bg-tablet.jpg");
     background-size: 768px 600px, 768px 600px;
@@ -178,8 +185,8 @@
 
   .main-screen__slider.swiper-container {
     width: calc(100% - 50px);
-    padding: 50px 25px 0;
-    height: 275px;
+    padding: 70px 25px 0;
+    height: 210px;
     margin: 0;
     background-color: #ffffff;
     opacity: 1;
@@ -228,6 +235,8 @@
     width: auto;
     margin-top: 10px;
     margin-bottom: 0;
+    line-height: 15px;
+    opacity: 1;
   }
 
   .main-screen__slider svg {
@@ -237,18 +246,23 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width-m) {
   .main-screen {
+    background: none;
+    background-color: #ffffff;
     width: 100%;
-    background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0.3) 100%), url("../img/bg-mobile.jpg");
-    background-size: 320px 470px, 320px 470px;
   }
 
   .main-screen__wrapper {
+    background-color: #000000;
     padding: 130px 0 0;
-    width: calc(100% - 40px);
+    width: calc(100%);
     margin: 0;
     min-height: auto;
+    background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0.3) 100%), url("../img/bg-mobile.jpg");
+    background-size: 320px 470px, 320px 470px;
+    background-position: top right, top right;
+    background-repeat: no-repeat, no-repeat;
   }
 
   .main-screen h2 {
@@ -258,22 +272,23 @@
     line-height: 20px;
     min-height: 40px;
     letter-spacing: 1px;
+    width: calc(100% - 40px);
   }
 
   .main-screen__mobile-text {
-    width: 100%;
+    width: calc(100% - 40px);
     padding: 0 20px;
     font-size: 16px;
     display: block;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
     min-height: 40px;
   }
 
   .main-screen__full-text {
     padding: 35px 20px 40px;
-    width: 100%;
+    width: calc(100% - 40px);
     font-size: 12px;
     line-height: 18px;
     margin-bottom: 0;
@@ -291,13 +306,14 @@
   }
 
   .main-screen__buttons-wrapper {
-    width: 100%;
+    width: calc(100% - 40px);
     flex-direction: column;
     padding: 0 20px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
 
-  .main-screen__contacts {
+  .main-screen__contacts,
+  .main-screen__services {
     outline: none;
     border: 1px solid $bg-green;
   }

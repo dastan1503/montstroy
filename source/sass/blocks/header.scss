@@ -84,7 +84,7 @@
   display: none;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: $width-t) {
   .header {
     width: calc(100% - 130px);
     padding: 7px 65px;
@@ -159,7 +159,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width-m) {
   .header {
     width: calc(100% - 40px);
     justify-content: space-between;

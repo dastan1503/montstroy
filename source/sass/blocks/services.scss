@@ -44,14 +44,14 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 
 .services__main-item {
   width: calc((100% - 96px) / 3 - 90px);
   padding: 10px 45px;
   min-height: 470px;
-  border: $border-gray;
-  margin-bottom: 45px;
+  margin-bottom: 55px;
   margin-right: 45px;
   box-shadow: 0 5px 9px 1px rgba(0, 0, 0, 0.05);
 }
@@ -76,7 +76,7 @@
   text-decoration: underline;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: $width-t) {
   .services {
     width: calc(100% - 44px);
     padding: 0 22px;
@@ -179,7 +179,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width-m) {
   .services {
     width: 100%;
     padding: 0;

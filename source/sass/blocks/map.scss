@@ -20,13 +20,13 @@
   border-bottom: 2px solid $bg-green;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: $width-t) {
   .map iframe {
     height: 348px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width-m) {
   .map {
     margin-top: 15px;
   }
