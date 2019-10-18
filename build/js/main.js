@@ -116,3 +116,13 @@
     }
   })();
 })();
+
+//наложение маски ввода на ввод телефона
+(function () {
+  var element = document.getElementById('phone');
+  var maskOptions = {
+    mask: '+0(000)000-00-00'
+  };
+  var mask = IMask(element, maskOptions);
+  console.log(element);
+}());

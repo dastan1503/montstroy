@@ -678,14 +678,14 @@ function a(a,b){if(b){var c=!a.getAttribute("viewBox")&&b.getAttribute("viewBox"
   var userAgent = getBuiltIn('navigator', 'userAgent') || '';
 
   // https://github.com/zloirock/core-js/issues/280
-   // eslint-disable-next-line unicorn/no-unsafe-regex
+  // eslint-disable-next-line unicorn/no-unsafe-regex
 
 
   var webkitStringPadBug = /Version\/10\.\d+(\.\d+)?( Mobile\/\w+)? Safari\//.test(userAgent);
 
   var $padEnd = stringPad.end;
 
-   // `String.prototype.padEnd` method
+  // `String.prototype.padEnd` method
   // https://tc39.github.io/ecma262/#sec-string.prototype.padend
 
 
@@ -703,7 +703,7 @@ function a(a,b){if(b){var c=!a.getAttribute("viewBox")&&b.getAttribute("viewBox"
 
   var $padStart = stringPad.start;
 
-   // `String.prototype.padStart` method
+  // `String.prototype.padStart` method
   // https://tc39.github.io/ecma262/#sec-string.prototype.padstart
 
 
@@ -4670,12 +4670,3 @@ function a(a,b){if(b){var c=!a.getAttribute("viewBox")&&b.getAttribute("viewBox"
 
 }));
 //# sourceMappingURL=imask.js.map
-
-(function () {
-  var element = document.getElementById('phone');
-  var maskOptions = {
-    mask: '+0(000)000-00-00'
-  };
-  var mask = IMask(element, maskOptions);
-  console.log(element);
-}());

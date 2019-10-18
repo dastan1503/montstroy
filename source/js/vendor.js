@@ -4670,12 +4670,3 @@ function a(a,b){if(b){var c=!a.getAttribute("viewBox")&&b.getAttribute("viewBox"
 
 }));
 //# sourceMappingURL=imask.js.map
-
-(function () {
-  var element = document.getElementById('phone');
-  var maskOptions = {
-    mask: '+0(000)000-00-00'
-  };
-  var mask = IMask(element, maskOptions);
-  console.log(element);
-}());
