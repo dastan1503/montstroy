@@ -200,6 +200,7 @@
 
   .partners__slider {
     padding-top: 0;
+    width: 100%;
   }
 
   .partners h2 {
@@ -221,7 +222,7 @@
   .partners .swiper-slide {
     border: 1px solid $bg-gray;
     box-shadow: none;
-    width: calc(100% - 2px);
+    width: calc(100% - 5px);
     margin-left: -20px;
 
     &:not(.swiper-slide-active) {

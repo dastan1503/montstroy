@@ -386,36 +386,114 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__wrapper">
-      <a class="footer__logo">
-        <span class="visually-hidden">На главную</span>
-        <img src="img/logo.png" alt="логотип" srcset="img/logo@2x.png 2x" width="141" height="160">
-      </a>
-      <p class="footer__name">ЗАО &laquo;НСП &laquo;МонтСтрой&raquo;</p>
+    <div class="footer__content">
+      <div class="footer__wrapper">
+        <a class="footer__logo">
+          <span class="visually-hidden">На главную</span>
+          <img src="img/logo.png" alt="логотип" srcset="img/logo@2x.png 2x" width="141" height="160">
+        </a>
+        <p class="footer__name">ЗАО &laquo;НСП &laquo;МонтСтрой&raquo;</p>
 
-      <nav class="footer__nav">
-        <ul>
-          <li>
-            <a href="#">Услуги</a>
-          </li>
-          <li>
-            <a href="#">Проекты</a>
-          </li>
-          <li>
-            <a href="#">Партнеры</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="footer__nav">
+          <ul>
+            <li>
+              <a href="#">Услуги</a>
+            </li>
+            <li>
+              <a href="#">Проекты</a>
+            </li>
+            <li>
+              <a href="#">Партнеры</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
 
-      <div class="footer__contacts contacts contacts--gray">
+        <div class="footer__contacts contacts contacts--gray">
+          <ul>
+            <li class="contacts__item">
+              <p class="contacts__adress">
+                <svg width="12" height="15"><use xlink:href="img/sprite_auto.svg#geo-pin"></use></svg>
+              Варшавское шоссе, д.&nbsp;118,&nbsp;к.1&nbsp;Бизнес-центр "ВАРШАВКА Sky"</p>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:zao@montstroy.ru">
+                <svg width="16" height="11"><use xlink:href="img/sprite_auto.svg#icon-mail"></use></svg>
+                zao@montstroy.ru</a>
+            </li>
+            <li class="contacts__item">
+              <a href="tel:+74954526723">
+                <svg width="13" height="13"><use xlink:href="img/sprite_auto.svg#icon-phone"></use></svg>
+                +7 (495) 452-67-23
+                <span class="contacts__time">Ежедневно с 9:00 до 18:00</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__social">
+          <ul>
+            <li class="footer__social-item">
+              <a href="#">
+                <span class="visually-hidden">Переход на страницу Вконтакте</span>
+                <svg width="35" height="21"><use xlink:href="img/sprite_auto.svg#vk"></use></svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#">
+                <span class="visually-hidden">Переход на страницу Твиттер</span>
+                <svg width="27" height="22"><use xlink:href="img/sprite_auto.svg#twitter"></use></svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#">
+                <span class="visually-hidden">Переход на страницу Фейсбук</span>
+                <svg width="14" height="26"><use xlink:href="img/sprite_auto.svg#fb"></use></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="footer__form form" id="form">
+        <h2>Свяжитесь с нами</h2>
+        <form>
+          <label class="form__name">
+            <span>Имя</span>
+            <input type="text" required="">
+          </label>
+
+          <label class="form__tel">
+            <span>Телефон</span>
+            <input type="tel" id="phone" required="" pattern="(\+?\d[- .]*){7,13}">
+          </label>
+
+          <label class="form__email">
+            <span>E-mail</span>
+            <input type="email" required="">
+          </label>
+
+          <label class="form__message">
+            <span>Сообщение</span>
+            <input type="text" required="">
+          </label>
+
+          <div class="form__agreement">
+            <p>Заполняя форму на сайте, вы соглашаетесь с нашей</p>
+            <a href="#">Политикой конфиденциальности</a>
+          </div>
+          <button type="submit" name="send">Отправить</button>
+        </form>
+      </section>
+
+      <div class="footer__contacts contacts contacts--color">
         <ul>
           <li class="contacts__item">
             <p class="contacts__adress">
               <svg width="12" height="15"><use xlink:href="img/sprite_auto.svg#geo-pin"></use></svg>
-            Варшавское шоссе, д.&nbsp;118,&nbsp;к.1&nbsp;Бизнес-центр "ВАРШАВКА Sky"</p>
+            Варшавское шоссе, д.&nbsp;118,&nbsp;к.1&nbsp;Бизнес-центр &laquo;ВАРШАВКА Sky&raquo;</p>
           </li>
           <li class="contacts__item">
             <a href="mailto:zao@montstroy.ru">
@@ -431,82 +509,6 @@
           </li>
         </ul>
       </div>
-
-      <div class="footer__social">
-        <ul>
-          <li class="footer__social-item">
-            <a href="#">
-              <span class="visually-hidden">Переход на страницу Вконтакте</span>
-              <svg width="35" height="21"><use xlink:href="img/sprite_auto.svg#vk"></use></svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a href="#">
-              <span class="visually-hidden">Переход на страницу Твиттер</span>
-              <svg width="27" height="22"><use xlink:href="img/sprite_auto.svg#twitter"></use></svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a href="#">
-              <span class="visually-hidden">Переход на страницу Фейсбук</span>
-              <svg width="14" height="26"><use xlink:href="img/sprite_auto.svg#fb"></use></svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <section class="footer__form form" id="form">
-      <h2>Свяжитесь с нами</h2>
-      <form>
-        <label class="form__name">
-          <span>Имя</span>
-          <input type="text" required="">
-        </label>
-
-        <label class="form__tel">
-          <span>Телефон</span>
-          <input type="tel" id="phone" required="" pattern="(\+?\d[- .]*){7,13}">
-        </label>
-
-        <label class="form__email">
-          <span>E-mail</span>
-          <input type="email" required="">
-        </label>
-
-        <label class="form__message">
-          <span>Сообщение</span>
-          <input type="text" required="">
-        </label>
-
-        <div class="form__agreement">
-          <p>Заполняя форму на сайте, вы соглашаетесь с нашей</p>
-          <a href="#">Политикой конфиденциальности</a>
-        </div>
-        <button type="submit" name="send">Отправить</button>
-      </form>
-    </section>
-
-    <div class="footer__contacts contacts contacts--color">
-      <ul>
-        <li class="contacts__item">
-          <p class="contacts__adress">
-            <svg width="12" height="15"><use xlink:href="img/sprite_auto.svg#geo-pin"></use></svg>
-          Варшавское шоссе, д.&nbsp;118,&nbsp;к.1&nbsp;Бизнес-центр &laquo;ВАРШАВКА Sky&raquo;</p>
-        </li>
-        <li class="contacts__item">
-          <a href="mailto:zao@montstroy.ru">
-            <svg width="16" height="11"><use xlink:href="img/sprite_auto.svg#icon-mail"></use></svg>
-            zao@montstroy.ru</a>
-        </li>
-        <li class="contacts__item">
-          <a href="tel:+74954526723">
-            <svg width="13" height="13"><use xlink:href="img/sprite_auto.svg#icon-phone"></use></svg>
-            +7 (495) 452-67-23
-            <span class="contacts__time">Ежедневно с 9:00 до 18:00</span>
-          </a>
-        </li>
-      </ul>
     </div>
 
     <div class="footer__copyright">

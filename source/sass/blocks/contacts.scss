@@ -1,6 +1,6 @@
 .contacts--color {
-  width: 170px;
-  padding-left: 125px;
+  width: 180px;
+  padding-left: 35px;
   color: #ffffff;
 }
 
@@ -12,6 +12,10 @@
 
 .contacts__item {
   margin-bottom: 45px;
+}
+
+.contacts__item:nth-of-type(2) {
+  margin-bottom: 40px;
 }
 
 .contacts__item p,
@@ -99,10 +103,15 @@
     padding-left: 100px;
     padding-bottom: 10px;
     padding-top: 20px;
+    width: calc(100% - 100px);
   }
 
   .contacts__item svg {
     left: -30px;
+  }
+
+  .contacts__item:nth-of-type(2) {
+    margin-bottom: 10px;
   }
 
   .contacts--color p {
@@ -119,7 +128,7 @@
   }
 
   .contacts--gray {
-    padding-top: 10px;
+    padding-top: 15px;
     display: block;
     margin: 0 auto;
     background-color: transparent;

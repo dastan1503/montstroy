@@ -35,7 +35,8 @@
 
 .main-screen__full-text {
   font-size: 24px;
-  width: 1030px;
+  width: 100%;
+  max-width: 1030px;
   font-weight: 500;
   color: #ffffff;
   line-height: 38px;
