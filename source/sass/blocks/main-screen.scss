@@ -336,7 +336,6 @@
   .main-screen__slider .swiper-slide {
     box-shadow: none;
     width: calc(100% - 142px);
-    margin: 0 20px;
     height: 155px;
     border: $border-gray;
     transform: none;
@@ -345,6 +344,11 @@
 
   .main-screen__slider .swiper-slide-active {
     transform: none;
+    margin-left: -10px;
+  }
+
+  .main-screen__slider .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0;
   }
 
   .main-screen__slider p {
